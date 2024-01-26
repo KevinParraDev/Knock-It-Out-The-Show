@@ -26,8 +26,8 @@ public class PlayerOne : MonoBehaviour
     [SerializeField] private float timeJumpSaved;
     [SerializeField] private float coyoteTime;
     private bool falling;
-    private bool saveJump;
-    private bool inCoyoteTime;
+    public bool saveJump;
+    public bool inCoyoteTime;
     public bool canJump;
 
     public static PlayerOne Instance;
@@ -92,6 +92,7 @@ public class PlayerOne : MonoBehaviour
             {
                 if (!inCoyoteTime)
                 {
+                    Debug.Log("Dar coyote time");
                     inCoyoteTime = true;
                     StartCoroutine(CoyoteTime());
                 }
@@ -151,6 +152,8 @@ public class PlayerOne : MonoBehaviour
     // Este salto se llama desde el Input System
     public void Jump(InputAction.CallbackContext callbackContext)
     {
+        Debug.Log("Saltar 2");
+
         // Si está en el suelo salta, si no, llama a guardar salto, lo cual hará que salte si toca el suelo en un corto tiempo
         if (callbackContext.performed && canJump)
         {
@@ -167,9 +170,13 @@ public class PlayerOne : MonoBehaviour
     // Este salto se llama cuando tiene un salto guardado
     public void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, 0f);
-        rb.AddForce(new Vector2(0, jumpHeight));
-        //anim.SetTrigger("Jump");
+        if(canJump)
+        {
+            Debug.Log("Saltar 1");
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
+            rb.AddForce(new Vector2(0, jumpHeight));
+            //anim.SetTrigger("Jump");
+        }
     }
 
     //// Para comprobar si esta en una plataforma movible
@@ -202,6 +209,7 @@ public class PlayerOne : MonoBehaviour
     IEnumerator CoyoteTime()
     {
         yield return new WaitForSeconds(coyoteTime);
+        Debug.Log("Hola " + coyoteTime);
         canJump = false;
     }
 }
