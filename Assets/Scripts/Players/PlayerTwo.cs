@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class PlayerTwo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField]
+    private GameObject _camera;
+
+    private static PlayerTwo Instance;
+
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+
+            // No destruir el LM durante el cambio de escenas
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (_camera)
+        {
+            transform.position = _camera.transform.position;
+        }
     }
+
 }
