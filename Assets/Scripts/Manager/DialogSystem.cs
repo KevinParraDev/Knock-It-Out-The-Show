@@ -89,18 +89,18 @@ public class DialogSystem : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetButtonDown("Fire1") && zapataTalking)
-        //{
-        //    if (!didDialogueStart)
-        //    {
-        //        StartDialogue();
-        //    }
-        //    else if (nextLine == true)
-        //    {
-        //        nextLine = false;
-        //        NextDialogueLine();
-        //    }
-        //}
+        if (Input.GetButtonDown("Fire1") && zapataTalking)
+        {
+            if (!didDialogueStart)
+            {
+                StartDialogue();
+            }
+            else if (nextLine == true)
+            {
+                nextLine = false;
+                NextDialogueLine();
+            }
+        }
 
     }
 }
