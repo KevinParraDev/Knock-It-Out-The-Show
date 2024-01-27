@@ -37,7 +37,10 @@ public class PublicProyectile : MonoBehaviour
 
             yield return null;
         }
+    }
 
+    public void ShootFinish()
+    {
         this.gameObject.SetActive(false);
     }
 }

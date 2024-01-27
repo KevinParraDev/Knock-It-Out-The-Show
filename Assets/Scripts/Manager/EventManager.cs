@@ -5,7 +5,5 @@ using UnityEngine;
 
 public static class EventManager
 {
-    public static Action OnStartGameEvent;
-
-    public static Action OnBackToMenuEvent;
+    public static Action OnPlayerHit;
 }

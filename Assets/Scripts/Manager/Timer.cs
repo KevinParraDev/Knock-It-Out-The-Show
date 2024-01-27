@@ -30,7 +30,10 @@ public class Timer : MonoBehaviour
 
     public void FinDelJuego()
     {
-        GameManager.Instance.ReloadLevel();
+        if (GameManager.Instance)
+        {
+            GameManager.Instance.ReloadLevel();
+        }
     }
 
     void Update()
