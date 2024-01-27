@@ -87,7 +87,7 @@ public class PlayerOne : MonoBehaviour
                 if (falling)
                 {
                     falling = false;
-                    //anim.SetTrigger("Arrive");
+                    anim.SetTrigger("Arrive");
                 }
             }
             else
@@ -101,7 +101,7 @@ public class PlayerOne : MonoBehaviour
                 if (rb.velocity.y < 0 && falling == false)
                 {
                     falling = true;
-                    //anim.SetTrigger("Fall");
+                    anim.SetTrigger("Fall");
                 }
             }
         }
@@ -131,10 +131,10 @@ public class PlayerOne : MonoBehaviour
         else if (input.x > 0 & direction == -1)
             Turn(false);
 
-        //if (input.x != 0 && canJump)
-        //    anim.SetBool("Walk", true);
-        //else
-        //    anim.SetBool("Walk", false);
+        if (input.x != 0 && canJump)
+            anim.SetBool("Walk", true);
+        else
+            anim.SetBool("Walk", false);
     }
 
     public void Turn(bool lookAtRight)
@@ -172,7 +172,7 @@ public class PlayerOne : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(new Vector2(0, jumpHeight));
-            //anim.SetTrigger("Jump");
+            anim.SetTrigger("Jump");
         }
     }
 
