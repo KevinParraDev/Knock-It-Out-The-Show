@@ -8,6 +8,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private Checkpoint _initialCheckpoint;
 
+    [SerializeField]
+    private Transform _endPoint;
+
     private void Start()
     {
         PlayerOne.Instance.GetCheckpointManager().lastCheckpoint = _initialCheckpoint.transform;
@@ -17,7 +20,10 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
+        // TODO: Logica de completado con el punto final
+        if ((_endPoint.position - PlayerOne.Instance.transform.position).magnitude < 1)
+        {
+            GameManager.Instance.HandleLevelCompleted();
+        }
     }
 }

@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-    public Vector3 _levelStartPosition;
-
     private void Awake()
     {
         if (Instance == null)
@@ -45,14 +43,18 @@ public class GameManager : MonoBehaviour
     {
 
         SceneManager.LoadScene(level);
-        PlayerOne.Instance.transform.position = _levelStartPosition;
+    }
+
+    public void HandleLevelCompleted()
+    {
+        LoadNextLevel();
     }
 
     public void LoadNextLevel()
     {
         _currentLevel++;
 
-        if (_currentLevel <= SceneManager.sceneCount - 1)
+        if (_currentLevel <= SceneManager.sceneCountInBuildSettings - 1)
         {
             // Se carga la escena del siguiente nivel
             LoadLevel(_currentLevel);
