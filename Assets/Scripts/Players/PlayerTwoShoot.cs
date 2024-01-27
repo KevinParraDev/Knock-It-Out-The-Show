@@ -5,7 +5,10 @@ using UnityEngine;
 public class PlayerTwoShoot : MonoBehaviour
 {
     [SerializeField]
-     private ShootPointerPool _pool;
+    private ShootPointerPool _pointerPool;
+
+    [SerializeField]
+    private ProyectilePool _proyectilePool;
 
      [SerializeField]
      private Transform _shootPoint;
@@ -56,22 +59,25 @@ public class PlayerTwoShoot : MonoBehaviour
 
     private void Shoot()
     {
-          // Triggerea la animacion si la hay
-          if (_anim != null)
-          {
-              _anim.SetTrigger("Shoot");
-          }
+        // Triggerea la animacion si la hay
+        if (_anim != null)
+        {
+            _anim.SetTrigger("Shoot");
+        }
 
         Vector2 mouseCursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         // Apuntador
-        GameObject pointer = _pool.RequestPointer();
+        GameObject pointer = _pointerPool.RequestPointer();
         pointer.transform.position = new Vector3(mouseCursorPos.x, mouseCursorPos.y, 0);
-        Debug.Log("");
-        _canShoot = false;
-        _shootTimeRemaining = _timeRemainigInitial;
 
         // Proyectil
+
+        PublicProyectile proyectil = _proyectilePool.RequestProyectile();
+        proyectil.ShootProyectile(_shootPoint.position, mouseCursorPos);
+
+        _canShoot = false;
+        _shootTimeRemaining = _timeRemainigInitial;
 
         //GameObject bullet = _pool.RequestBullet();
         //bullet.transform.SetPositionAndRotation(shootPoint.position, shootPoint.rotation);
