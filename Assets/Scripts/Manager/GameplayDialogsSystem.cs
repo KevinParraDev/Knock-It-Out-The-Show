@@ -27,36 +27,28 @@ public class GameplayDialogsSystem : MonoBehaviour
     private bool didDialogueStart;
     private int lineIndex;
     private bool nextLine = false;
-    private bool zapataTalking;
-
-    public static GameplayDialogsSystem Instance;
+    public bool isTalking;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
+        EventManager.OnPlayerHit += RequestCakeHitDialogue;
+    }
 
-            // No destruir el LM durante el cambio de escenas
-            DontDestroyOnLoad(this);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-
+    private void OnDestroy()
+    {
+        EventManager.OnPlayerHit -= RequestCakeHitDialogue;
     }
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        zapataTalking = true;
+        isTalking = false;
         //StartDialogue();
     }
 
     private void StartDialogue()
     {
+        isTalking = true;
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         lineIndex = 0;
@@ -120,13 +112,16 @@ public class GameplayDialogsSystem : MonoBehaviour
 
         yield return new WaitForSeconds(dialogueDuration);
         dialoguePanel.SetActive(false);
-        zapataTalking = false;
+        isTalking = false;
 
     }
 
     public void RequestCakeHitDialogue()
     {
-        dialogueLines = cakeHitLines;
-        StartDialogue();
+        if (!isTalking)
+        {
+            dialogueLines = cakeHitLines;
+            StartDialogue();
+        }
     }
 }
