@@ -44,7 +44,9 @@ public class Pointer : MonoBehaviour
             if ((transform.position - PlayerOne.Instance.transform.position).magnitude < _killerZone && this.isActiveAndEnabled)
             {
                 PlayerOne.Instance.Death();
-                GameplayDialogsSystem.Instance.RequestCakeHitDialogue();
+                EventManager.OnPlayerHit?.Invoke();
+                if (GameplayDialogsSystem.Instance)
+                    GameplayDialogsSystem.Instance.RequestCakeHitDialogue();
             }
 
             gameObject.SetActive(false);

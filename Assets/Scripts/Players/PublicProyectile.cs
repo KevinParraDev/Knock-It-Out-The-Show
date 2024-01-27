@@ -13,6 +13,16 @@ public class PublicProyectile : MonoBehaviour
     [SerializeField]
     private float _heightY = 3.0f;
 
+    private void Start()
+    {
+        EventManager.OnPlayerHit += ShootFinish;
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.OnPlayerHit -= ShootFinish;
+    }
+
     public void ShootProyectile(Vector3 start, Vector2 target)
     {
         StartCoroutine(CurveMovement(start, target));
