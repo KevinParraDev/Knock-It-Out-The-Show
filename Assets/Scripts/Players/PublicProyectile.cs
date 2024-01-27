@@ -37,5 +37,7 @@ public class PublicProyectile : MonoBehaviour
 
             yield return null;
         }
+
+        this.gameObject.SetActive(false);
     }
 }

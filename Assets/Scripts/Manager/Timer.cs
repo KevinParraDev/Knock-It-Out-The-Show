@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
 
     public void FinDelJuego()
     {
-        Debug.Log("Se acabo el tiempo!");
+        GameManager.Instance.ReloadLevel();
     }
 
     void Update()

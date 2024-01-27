@@ -202,6 +202,11 @@ public class PlayerOne : MonoBehaviour
         Revive();
     }
 
+    public CheckpointManager GetCheckpointManager()
+    {
+        return this.checkpointManager;
+    }
+
     public void Bounse(Vector3 center, float boundorce)
     {
         DisableMotion(false);
