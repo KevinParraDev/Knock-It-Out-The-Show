@@ -15,6 +15,9 @@ public class MovingPlatform: MonoBehaviour
     [SerializeField]
     protected bool _active;
 
+    [SerializeField]
+    private float _stopSeconds = 1.5f;
+
     [Space(10)]
     [SerializeField]
     protected GameObject _platform;
@@ -24,6 +27,14 @@ public class MovingPlatform: MonoBehaviour
 
     private Animator _platformAnimator;
 
+
+    private void Start()
+    {
+        if(_platform.TryGetComponent(out Animator anim))
+        {
+            _platformAnimator = anim;
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -67,16 +78,28 @@ public class MovingPlatform: MonoBehaviour
         // Comprobamos si la plataforma ya llego al punto
         if (Vector3.Distance(_platform.transform.position, _wayPoints[_indexWayPoint].position) <= 0.1f)
         {
-            _indexWayPoint++;
-
-            if (_indexWayPoint >= _wayPoints.Length)
-            {
-                _indexWayPoint = 0;
-            }
+            StartCoroutine(ChangeWaypoint());
         }
 
         // Esto es lo que me desplaza la plataforma
         _platform.transform.position = Vector3.MoveTowards(_platform.transform.position, _wayPoints[_indexWayPoint].position, _speed);
+    }
+
+    private IEnumerator ChangeWaypoint()
+    {
+        _platformAnimator.SetBool("IsMoving", false);
+        _active = false;
+        yield return new WaitForSeconds(_stopSeconds);
+
+        _indexWayPoint++;
+
+        if (_indexWayPoint >= _wayPoints.Length)
+        {
+            _indexWayPoint = 0;
+        }
+
+        _platformAnimator.SetBool("IsMoving", true);
+        _active = true;
     }
 
     // TODO: En caso de que queramos que la plataforma vuelva al medio creamos el metodo Stop
