@@ -23,6 +23,7 @@ public class LevelManager : MonoBehaviour
         // TODO: Logica de completado con el punto final
         if ((_endPoint.position - PlayerOne.Instance.transform.position).magnitude < 1)
         {
+            StopAllCoroutines();
             GameManager.Instance.HandleLevelCompleted();
         }
     }

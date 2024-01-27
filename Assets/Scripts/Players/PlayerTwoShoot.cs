@@ -32,12 +32,12 @@ public class PlayerTwoShoot : MonoBehaviour
      {
           _timeRemainigInitial = _shootTimeRemaining;
 
-          _anim = GetComponent<Animator>();
+          //_anim = GetComponent<Animator>();
      }
 
      private void Update()
      {
-          if (_shootTimeRemaining < 0)
+          if (_shootTimeRemaining <= 0)
           {
             _canShoot = true;
             
@@ -46,13 +46,10 @@ public class PlayerTwoShoot : MonoBehaviour
           {
           _shootTimeRemaining -= Time.deltaTime;
           }
-     }
 
-    private void FixedUpdate()
-    {
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
-            if(_canShoot)
+            if (_canShoot)
                 Shoot();
         }
     }
@@ -60,10 +57,10 @@ public class PlayerTwoShoot : MonoBehaviour
     private void Shoot()
     {
         // Triggerea la animacion si la hay
-        if (_anim != null)
-        {
-            _anim.SetTrigger("Shoot");
-        }
+        //if (_anim != null)
+        //{
+        //    _anim.SetTrigger("Shoot");
+        //}
 
         Vector2 mouseCursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
