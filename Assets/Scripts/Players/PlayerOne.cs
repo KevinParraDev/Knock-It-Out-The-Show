@@ -202,23 +202,21 @@ public class PlayerOne : MonoBehaviour
         Revive();
     }
 
-    //// Para comprobar si esta en una plataforma movible
-    //public void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.transform.CompareTag("MovingPlatform"))
-    //    {
-    //        transform.parent = collision.transform;
-    //    }
-    //}
+    public void Bounse(Vector3 center, float boundorce)
+    {
+        DisableMotion(false);
+        rb.velocity = new Vector2(0f, 0f);
+        Vector2 dir = (transform.position - center).normalized;
+        rb.AddForce(dir * boundorce);
+        StartCoroutine(DelayDisableMotion());
+        Debug.Log(dir + " - " + boundorce);
+    }
 
-    //// Para comprobar si ya no esta en plataforma movible
-    //public void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if (collision.transform.CompareTag("MovingPlatform"))
-    //    {
-    //        transform.parent = null;
-    //    }
-    //}
+    IEnumerator DelayDisableMotion()
+    {
+        yield return new WaitForSeconds(0.1f);
+        DisableMotion(true);
+    }
 
     // Guarda el salto por si el jugador presiona saltar justo antes de tocar el suelo
     IEnumerator SaveJump()
