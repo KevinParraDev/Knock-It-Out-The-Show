@@ -47,7 +47,7 @@ public class PlayerOne : MonoBehaviour
             Destroy(gameObject);
         }
 
-
+        checkpointManager = GetComponent<CheckpointManager>();
     }
 
     void Start()
@@ -56,7 +56,6 @@ public class PlayerOne : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
-        checkpointManager = GetComponent<CheckpointManager>();
 
         SetInitialValues();
     }

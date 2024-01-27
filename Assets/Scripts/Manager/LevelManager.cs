@@ -24,7 +24,8 @@ public class LevelManager : MonoBehaviour
         if ((_endPoint.position - PlayerOne.Instance.transform.position).magnitude < 1)
         {
             StopAllCoroutines();
-            GameManager.Instance.HandleLevelCompleted();
+            if(GameManager.Instance)
+                GameManager.Instance.HandleLevelCompleted();
         }
     }
 }
