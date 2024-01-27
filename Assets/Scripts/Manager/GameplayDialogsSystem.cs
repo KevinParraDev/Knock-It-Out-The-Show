@@ -29,23 +29,14 @@ public class GameplayDialogsSystem : MonoBehaviour
     private bool nextLine = false;
     private bool zapataTalking;
 
-    public static GameplayDialogsSystem Instance;
-
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
+        EventManager.OnPlayerHit += RequestCakeHitDialogue;
+    }
 
-            // No destruir el LM durante el cambio de escenas
-            DontDestroyOnLoad(this);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-
+    private void OnDestroy()
+    {
+        EventManager.OnPlayerHit -= RequestCakeHitDialogue;
     }
 
     private void Start()

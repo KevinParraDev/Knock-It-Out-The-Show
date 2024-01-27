@@ -45,8 +45,6 @@ public class Pointer : MonoBehaviour
             {
                 PlayerOne.Instance.Death();
                 EventManager.OnPlayerHit?.Invoke();
-                if (GameplayDialogsSystem.Instance)
-                    GameplayDialogsSystem.Instance.RequestCakeHitDialogue();
             }
 
             gameObject.SetActive(false);
