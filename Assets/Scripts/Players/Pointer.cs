@@ -8,6 +8,9 @@ public class Pointer : MonoBehaviour
     [SerializeField]
     private float _timeRemaining = 5.0f;
 
+    [SerializeField]
+    private float _killerZone = 1.0f;
+
     private float _initialTimeRemaining;
 
     // Start is called before the first frame update
@@ -38,7 +41,7 @@ public class Pointer : MonoBehaviour
 
         if(_timeRemaining <= 0)
         {
-            if ((transform.position - PlayerOne.Instance.transform.position).magnitude < 1 && this.isActiveAndEnabled)
+            if ((transform.position - PlayerOne.Instance.transform.position).magnitude < _killerZone && this.isActiveAndEnabled)
             {
                 PlayerOne.Instance.Death();
             }
