@@ -139,7 +139,6 @@ public class PlayerOne : MonoBehaviour
 
     public void Turn(bool lookAtRight)
     {
-        Debug.Log("Girar");
         //spriteRenderer.flipX = lookAtRight;
         direction *= -1;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
@@ -153,8 +152,6 @@ public class PlayerOne : MonoBehaviour
     // Este salto se llama desde el Input System
     public void Jump(InputAction.CallbackContext callbackContext)
     {
-        Debug.Log("Saltar 2");
-
         // Si está en el suelo salta, si no, llama a guardar salto, lo cual hará que salte si toca el suelo en un corto tiempo
         if (callbackContext.performed && canJump)
         {
@@ -173,7 +170,6 @@ public class PlayerOne : MonoBehaviour
     {
         if(canJump)
         {
-            Debug.Log("Saltar 1");
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(new Vector2(0, jumpHeight));
             //anim.SetTrigger("Jump");
@@ -202,7 +198,7 @@ public class PlayerOne : MonoBehaviour
         transform.position = checkpointManager.lastCheckpoint.position;
 
         GetComponent<BoxCollider2D>().enabled = true;
-        rb.gravityScale = 3;
+        rb.gravityScale = 5;
         Revive();
     }
 
