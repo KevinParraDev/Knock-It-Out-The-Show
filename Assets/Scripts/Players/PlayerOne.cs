@@ -10,6 +10,7 @@ public class PlayerOne : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Animator anim;
     private PlayerInput playerInput;
+    private CheckpointManager checkpointManager;
     private Vector2 input;
     private bool alive = true;
 
@@ -55,6 +56,7 @@ public class PlayerOne : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
+        checkpointManager = GetComponent<CheckpointManager>();
 
         SetInitialValues();
     }
@@ -92,7 +94,6 @@ public class PlayerOne : MonoBehaviour
             {
                 if (!inCoyoteTime)
                 {
-                    Debug.Log("Dar coyote time");
                     inCoyoteTime = true;
                     StartCoroutine(CoyoteTime());
                 }
@@ -179,6 +180,32 @@ public class PlayerOne : MonoBehaviour
         }
     }
 
+    public void Death()
+    {
+        DisableMotion(false);
+        alive = false;
+        //anim.SetTrigger("Death");
+        GetComponent<BoxCollider2D>().enabled = false;
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 0;
+        LoadCheckpoint();
+    }
+
+    public void Revive()
+    {
+        DisableMotion(true);
+        alive = true;
+    }
+
+    public void LoadCheckpoint()
+    {
+        transform.position = checkpointManager.lastCheckpoint.position;
+
+        GetComponent<BoxCollider2D>().enabled = true;
+        rb.gravityScale = 3;
+        Revive();
+    }
+
     //// Para comprobar si esta en una plataforma movible
     //public void OnCollisionEnter2D(Collision2D collision)
     //{
@@ -209,7 +236,6 @@ public class PlayerOne : MonoBehaviour
     IEnumerator CoyoteTime()
     {
         yield return new WaitForSeconds(coyoteTime);
-        Debug.Log("Hola " + coyoteTime);
         canJump = false;
     }
 }
