@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        AudioManager.Instance.SetVolume(0.2f, AudioChannel.Sfx);
+    }
+
     public void GameStart()
     {
         
