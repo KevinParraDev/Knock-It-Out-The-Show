@@ -167,7 +167,7 @@ MonoBehaviour:
   - {fileID: 5800001546330139358}
   _speed: 0.1
   _active: 1
-  _stopSeconds: 1.5
+  _stopSeconds: 0.5
   _platform: {fileID: 5800001546870688446}
 --- !u!1 &5800001546870688446
 GameObject:
