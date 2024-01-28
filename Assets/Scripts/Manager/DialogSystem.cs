@@ -18,6 +18,7 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
     [SerializeField] private GameObject magicJuan, magicWizzard;
+    [SerializeField] private Animator blackCourtain;
 
     private AudioSource audioSource;
 
@@ -54,7 +55,8 @@ public class DialogSystem : MonoBehaviour
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
             zapataTalking = false;
-            GameManager.Instance.GameStart();
+            if(!showInStart)
+                GameManager.Instance.GameStart();
         }
     }
 
@@ -84,7 +86,9 @@ public class DialogSystem : MonoBehaviour
             }
             else if (ch == '¥')
             {
-                GameManager.Instance.HandleMenu();
+                blackCourtain.SetBool("Abierto", true);
+                blackCourtain.enabled = true;
+                //GameManager.Instance.HandleMenu();
             }
             else if (ch == '↕')
             {
