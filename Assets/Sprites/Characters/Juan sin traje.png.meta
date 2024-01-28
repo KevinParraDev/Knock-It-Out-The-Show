@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ad4752b483e5a14d8e0d90484ee3fce
+guid: c33c661d327fa4643838cc4427674e83
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Magia Aparicion_0
+      name: Juan sin traje_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 214c8c9fc9e96674fb2b63179c4c5672
-      internalID: 1851086084
+      spriteID: 58a3139a53b08a64ba0cf2e92b43d011
+      internalID: 478076977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magia Aparicion_1
+      name: Juan sin traje_1
       rect:
         serializedVersion: 2
         x: 48
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feeefc6582e278a438a9e04907de6d99
-      internalID: 1147472108
+      spriteID: db9e75cc957456b4eb81d65105290f7c
+      internalID: -1847947338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magia Aparicion_2
+      name: Juan sin traje_2
       rect:
         serializedVersion: 2
         x: 96
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 567f09b1ad033674e9510b7f9f26dbb7
-      internalID: 471440852
+      spriteID: 6d0f00f77f71974418c8b55b97bdc4ad
+      internalID: -1178488451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magia Aparicion_3
+      name: Juan sin traje_3
       rect:
         serializedVersion: 2
         x: 144
@@ -206,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa9ffcec1debe644811ff2f64a4d514
-      internalID: -1821127250
+      spriteID: 95206ed35714a764c9495eb45f4e9c71
+      internalID: -364956983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magia Aparicion_4
+      name: Juan sin traje_4
       rect:
         serializedVersion: 2
         x: 0
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bde2d343bfff4445965a9fb2168840a
-      internalID: -1785062469
+      spriteID: 17b422287f37d994998b62a8ae111315
+      internalID: 1239544949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magia Aparicion_5
+      name: Juan sin traje_5
       rect:
         serializedVersion: 2
         x: 48
@@ -248,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f7dce725844a28419d56fb6fb7d7546
-      internalID: -24284466
+      spriteID: 41abb974c9cc2e14596f4018308b3101
+      internalID: 1390958538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magia Aparicion_6
+      name: Juan sin traje_6
       rect:
         serializedVersion: 2
         x: 96
@@ -269,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18421cc484ef2e94ba04b037883b4881
-      internalID: -1321805014
+      spriteID: d4ab12ba9f2b72b47b53a37ae37e3457
+      internalID: 802083333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magia Aparicion_7
+      name: Juan sin traje_7
       rect:
         serializedVersion: 2
         x: 144
@@ -290,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30f9ed3717119d84f9615a4c028c08f0
-      internalID: 897740781
+      spriteID: e1814548a19b8f14491451d6e2190cd1
+      internalID: 675834422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magia Aparicion_8
+      name: Juan sin traje_8
       rect:
         serializedVersion: 2
         x: 0
@@ -311,8 +311,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1320db92f5527f84b81c001df27c4f26
-      internalID: 1632568146
+      spriteID: 701e0fcd3f194064183ed36fac465cba
+      internalID: 286847935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juan sin traje_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ab9ad55b064194486ed72258e3de84
+      internalID: 518761776
       vertices: []
       indices: 
       edges: []
@@ -328,15 +349,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Magia Aparicion_0: 1851086084
-      Magia Aparicion_1: 1147472108
-      Magia Aparicion_2: 471440852
-      Magia Aparicion_3: -1821127250
-      Magia Aparicion_4: -1785062469
-      Magia Aparicion_5: -24284466
-      Magia Aparicion_6: -1321805014
-      Magia Aparicion_7: 897740781
-      Magia Aparicion_8: 1632568146
+      Juan sin traje_0: 478076977
+      Juan sin traje_1: -1847947338
+      Juan sin traje_2: -1178488451
+      Juan sin traje_3: -364956983
+      Juan sin traje_4: 1239544949
+      Juan sin traje_5: 1390958538
+      Juan sin traje_6: 802083333
+      Juan sin traje_7: 675834422
+      Juan sin traje_8: 286847935
+      Juan sin traje_9: 518761776
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

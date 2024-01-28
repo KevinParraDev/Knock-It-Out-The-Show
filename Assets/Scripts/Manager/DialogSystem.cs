@@ -8,7 +8,7 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private float typingTime = 0.025f;
     [SerializeField] private float typingTimeLong = 0.3f;
 
-    //[SerializeField] private Animator zapataAnim;
+    [SerializeField] private Animator zapataAnim;
 
     //[SerializeField] private AudioClip zapatasVoice;
     [SerializeField] private int charsToPlaySound;
@@ -16,6 +16,7 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    [SerializeField] private GameObject appear;
 
     private AudioSource audioSource;
 
@@ -28,7 +29,7 @@ public class DialogSystem : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         zapataTalking = true;
-        //StartDialogue();
+        StartDialogue();
     }
 
     private void StartDialogue()
@@ -59,7 +60,7 @@ public class DialogSystem : MonoBehaviour
         dialogueText.text = string.Empty;
         int charIndex = 0;
 
-        //zapataAnim.SetBool("Talking", true);
+        zapataAnim.SetBool("Talking", true);
 
         foreach (char ch in dialogueLines[lineIndex])
         {
@@ -67,10 +68,18 @@ public class DialogSystem : MonoBehaviour
             {
                 yield return new WaitForSeconds(typingTimeLong);
             }
+            else if (ch == 'Æ')
+            {
+                appear.SetActive(true);
+            }
+            else if (ch == '§')
+            {
+                Debug.Log("Cerrar cortinas");
+            }
             else if (ch == '↕')
             {
                 nextLine = true;
-                //zapataAnim.SetBool("Talking", false);
+                zapataAnim.SetBool("Talking", false);
             }
             else
             {
