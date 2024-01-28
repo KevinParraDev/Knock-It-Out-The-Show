@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showInStart: 1
-  typingTime: 0.025
+  typingTime: 0.015
   typingTimeLong: 0.2
   zapataAnim: {fileID: 1641930901}
   charsToPlaySound: 4

@@ -19,6 +19,9 @@ public class StartScreen : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && !primerToque)
         {
+            AudioManager.Instance.SetVolume(1f, AudioChannel.Sfx);
+            AudioManager.Instance.PlaySound2D("RedobleTambores");
+            AudioManager.Instance.SetVolume(0.2f, AudioChannel.Sfx);
             GetComponent<Animator>().SetTrigger("Quitar");
         }
     }

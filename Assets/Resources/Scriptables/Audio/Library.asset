@@ -37,4 +37,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 50b5ec10c6249524aa0eba73249e6744, type: 3}
   - groupID: PlayerFall
     clips:
-    - {fileID: 8300000, guid: 60639e95584a6224eb1c06a3bab7a04e, type: 3}
+    - {fileID: 8300000, guid: 3d5d4e544cc4be44c94488bed7152de4, type: 3}
+    - {fileID: 8300000, guid: 34748ba37d1dcad47a85ef1792c28250, type: 3}
+  - groupID: RedobleTambores
+    clips:
+    - {fileID: 8300000, guid: f94427dc1fcecc241aaa60c41cc06097, type: 3}
