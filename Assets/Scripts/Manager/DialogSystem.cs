@@ -74,7 +74,12 @@ public class DialogSystem : MonoBehaviour
             }
             else if (ch == '§')
             {
+                GameManager.Instance.GameStart();
                 Debug.Log("Cerrar cortinas");
+            }
+            else if (ch == '¥')
+            {
+                GameManager.Instance.HandleMenu();
             }
             else if (ch == '↕')
             {

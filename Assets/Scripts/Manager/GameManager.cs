@@ -7,9 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField]
-    private float _loadSceneTime = 1f;
-
     private int _currentLevel = 1;
 
     public static GameManager Instance;
@@ -36,14 +33,14 @@ public class GameManager : MonoBehaviour
         LoadLevel(1);
     }
 
-    private void HandleMenu()
+    public void HandleMenu()
     {
         // El nivel 0 es el menú
         HandleLevelChange(0);
             
     }
 
-    private void HandleLevelChange(int level)
+    public void HandleLevelChange(int level)
     {
         SceneManager.LoadScene(level);
     }
