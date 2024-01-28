@@ -14,24 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: []
   soundGroups:
-  - groupID: '"WizzardSpeak"'
+  - groupID: WizardSpeak
     clips:
     - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
-  - groupID: '"Jump"'
+  - groupID: Jump
     clips:
     - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
-  - groupID: '"Bounce"'
+  - groupID: Bounce
     clips:
     - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
-  - groupID: '"Bounce"'
+  - groupID: CakeHit
     clips:
     - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
-  - groupID: '"CakeHit"'
+  - groupID: CakeShoot
     clips:
     - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
-  - groupID: '"CakeShoot"'
-    clips:
-    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
-  - groupID: '"Claps"'
+  - groupID: Claps
     clips:
     - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}

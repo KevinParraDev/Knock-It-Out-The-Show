@@ -93,10 +93,10 @@ public class DialogSystem : MonoBehaviour
             {
                 dialogueText.text += ch;
 
-                //if (charIndex % charsToPlaySound == 0)
-                //{
-                //    AudioManager.Instance.PlaySound2D("WizardSpeak");
-                //}
+                if (charIndex % charsToPlaySound == 0)
+                {
+                    AudioManager.Instance.PlaySound2D("WizardSpeak");
+                }
 
                 charIndex++;
                 yield return new WaitForSeconds(typingTime);
