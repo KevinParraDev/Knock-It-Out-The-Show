@@ -10,4 +10,5 @@ public static class EventManager
     public static Action PlayerOnWater;
 
     public static Action CheckpointAchieve;
+    public static Action LoserAction;
 }

@@ -30,6 +30,20 @@ public class Timer : MonoBehaviour
 
     public void FinDelJuego()
     {
+        PlayerOne.Instance.DisableMotion(false);
+        PlayerOne.Instance.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        EventManager.LoserAction?.Invoke();
+        StartCoroutine(ReiniciarJuego());
+
+        //if (GameManager.Instance)
+        //{
+        //    GameManager.Instance.ReloadLevel();
+        //}
+    }
+
+    IEnumerator ReiniciarJuego()
+    {
+        yield return new WaitForSeconds(2);
         if (GameManager.Instance)
         {
             GameManager.Instance.ReloadLevel();

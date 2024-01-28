@@ -20,6 +20,7 @@ public class GameplayDialogsSystem : MonoBehaviour
     [SerializeField, TextArea(4, 6)] private string[] cakeHitLines;
     [SerializeField, TextArea(4, 6)] private string[] playerOnWaterLines;
     [SerializeField, TextArea(4, 6)] private string[] goalAchieveLines;
+    [SerializeField, TextArea(4, 6)] private string[] loserAchieveLines;
 
 
     private AudioSource audioSource;
@@ -34,6 +35,7 @@ public class GameplayDialogsSystem : MonoBehaviour
         EventManager.OnPlayerHit += RequestCakeHitDialogue;
         EventManager.PlayerOnWater += RequestOnWaterDialogue;
         EventManager.CheckpointAchieve += RequestGoalAchieveDialogue;
+        EventManager.LoserAction += RequestLoserAchieveDialogue;
     }
 
     private void OnDestroy()
@@ -41,6 +43,7 @@ public class GameplayDialogsSystem : MonoBehaviour
         EventManager.OnPlayerHit -= RequestCakeHitDialogue;
         EventManager.PlayerOnWater -= RequestOnWaterDialogue;
         EventManager.CheckpointAchieve -= RequestGoalAchieveDialogue;
+        EventManager.LoserAction -= RequestLoserAchieveDialogue;
     }
 
     private void Start()
@@ -143,6 +146,15 @@ public class GameplayDialogsSystem : MonoBehaviour
         if (!isTalking)
         {
             dialogueLines = goalAchieveLines;
+            StartDialogue();
+        }
+    }
+
+    public void RequestLoserAchieveDialogue()
+    {
+        if (!isTalking)
+        {
+            dialogueLines = loserAchieveLines;
             StartDialogue();
         }
     }

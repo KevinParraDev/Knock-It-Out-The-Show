@@ -62,4 +62,6 @@ MonoBehaviour:
   goalAchieveLines:
   - Un golpe de suerte!!!
   - "Es lo m\xE1s lejos que llegar\xE1 en su vida"
+  loserAchieveLines:
+  - "Sab\xEDa que no lo lograr\xEDas Juan"
   isTalking: 0

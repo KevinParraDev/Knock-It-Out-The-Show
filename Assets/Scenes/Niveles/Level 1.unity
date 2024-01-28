@@ -4549,6 +4549,14 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1725035912}
+    - target: {fileID: 5870391052063898865, guid: e2345337d7bc5e945b291ba1cb9ec8c4, type: 3}
+      propertyPath: loserAchieveLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870391052063898865, guid: e2345337d7bc5e945b291ba1cb9ec8c4, type: 3}
+      propertyPath: loserAchieveLines.Array.data[0]
+      value: "Sab\xEDa que no lo lograr\xEDas Juan"
+      objectReference: {fileID: 0}
     - target: {fileID: 5870391052063898878, guid: e2345337d7bc5e945b291ba1cb9ec8c4, type: 3}
       propertyPath: m_RootOrder
       value: 1
