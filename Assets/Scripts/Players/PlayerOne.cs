@@ -177,6 +177,8 @@ public class PlayerOne : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.gravityScale = 0;
         LoadCheckpoint();
+
+        EventManager.PlayerOnWater?.Invoke();
     }
 
     public void Revive()

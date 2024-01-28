@@ -32,11 +32,15 @@ public class GameplayDialogsSystem : MonoBehaviour
     private void Awake()
     {
         EventManager.OnPlayerHit += RequestCakeHitDialogue;
+        EventManager.PlayerOnWater += RequestOnWaterDialogue;
+        EventManager.CheckpointAchieve += RequestGoalAchieveDialogue;
     }
 
     private void OnDestroy()
     {
         EventManager.OnPlayerHit -= RequestCakeHitDialogue;
+        EventManager.PlayerOnWater -= RequestOnWaterDialogue;
+        EventManager.CheckpointAchieve -= RequestGoalAchieveDialogue;
     }
 
     private void Start()
@@ -121,6 +125,24 @@ public class GameplayDialogsSystem : MonoBehaviour
         if (!isTalking)
         {
             dialogueLines = cakeHitLines;
+            StartDialogue();
+        }
+    }
+
+    public void RequestOnWaterDialogue()
+    {
+        if (!isTalking)
+        {
+            dialogueLines = playerOnWaterLines;
+            StartDialogue();
+        }
+    }
+
+    public void RequestGoalAchieveDialogue()
+    {
+        if (!isTalking)
+        {
+            dialogueLines = goalAchieveLines;
             StartDialogue();
         }
     }

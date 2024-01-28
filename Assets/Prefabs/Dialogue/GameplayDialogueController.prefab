@@ -55,5 +55,11 @@ MonoBehaviour:
   - "Lo \xFAnico dulce que tendr\xE1 en su vida ser\xE1 ese pastelazo"
   - En tu cara perdedor!
   - Y si mejor llamas a tu mami?
-  playerOnWaterLines: []
-  goalAchieveLines: []
+  playerOnWaterLines:
+  - "\xA1\xA1\xA1\xA1KNOCK OUT!!!!"
+  - Su primera ducha en semanas
+  - "Ya le hacia falta un ba\xF1o"
+  goalAchieveLines:
+  - Un golpe de suerte!!!
+  - "Es lo m\xE1s lejos que llegar\xE1 en su vida"
+  isTalking: 0

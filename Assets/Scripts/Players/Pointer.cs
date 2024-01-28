@@ -43,8 +43,8 @@ public class Pointer : MonoBehaviour
         {
             if ((transform.position - PlayerOne.Instance.transform.position).magnitude < _killerZone && this.isActiveAndEnabled)
             {
-                PlayerOne.Instance.Death();
                 EventManager.OnPlayerHit?.Invoke();
+                PlayerOne.Instance.Death(); 
             }
 
             gameObject.SetActive(false);
