@@ -11,9 +11,9 @@ El juego está disponible en itch.io, puedes encontrarlo en el siguiente enlace:
 O descargarlo en:
 
 ## Screenshots
-![Captura-1](https://github.com/kesparo122/Survive-Bird/assets/77519626/054c9c90-b571-4a88-9aad-f9b84339b0cc)
+![Captura-1](https://github.com/kesparo122/World-Game-Jam-2024/blob/main/Assets/Sprites/Images/Principal.PNG)
 
-![Captura-2](https://github.com/kesparo122/Survive-Bird/assets/77519626/7d6dbdb9-a7e1-45d3-aa73-d5a987cb511c)
+![Captura-2](https://github.com/kesparo122/World-Game-Jam-2024/blob/main/Assets/Sprites/Images/Gameplay.png)
 
 ## Derechos
 Licencia CC
