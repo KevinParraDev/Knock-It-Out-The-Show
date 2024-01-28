@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
 
         if (_loadAnimation)
         {
-            _loadAnimation.SetBool("EndLevel", false);
+            _loadAnimation.SetBool("Close", false);
         }
 
         PlayerOne.Instance.GetCheckpointManager().lastCheckpoint = _initialCheckpoint.transform;
@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
         if ((_endPoint.position - PlayerOne.Instance.transform.position).magnitude < 1 && !_levelFinished)
         {
             _levelFinished = true;
-            _loadAnimation.SetBool("EndLevel", true);
+            _loadAnimation.SetBool("Close", true);
         }
     }
 }
