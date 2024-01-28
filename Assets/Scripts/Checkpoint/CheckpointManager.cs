@@ -16,6 +16,7 @@ public class CheckpointManager : MonoBehaviour
             {
                 actualOrder = newOrder;
                 SaveCheckpoint(other.transform.GetComponent<Checkpoint>().pointToAppear);
+                other.transform.GetComponent<Animator>().enabled = true;
             }
         }
     }

@@ -23,8 +23,14 @@ public class PlayerTwoShoot : MonoBehaviour
      [SerializeField]
      private bool _canShoot = false;
 
+    [SerializeField]
+    private SpriteRenderer spritePoint;
 
-     private float _timeRemainigInitial;
+    [SerializeField]
+    private Sprite[] pointers = new Sprite[2];
+
+
+    private float _timeRemainigInitial;
 
      private Animator _anim;
 
@@ -40,7 +46,7 @@ public class PlayerTwoShoot : MonoBehaviour
           if (_shootTimeRemaining <= 0)
           {
             _canShoot = true;
-            
+            spritePoint.sprite = pointers[0];
           }
           else
           {
@@ -74,6 +80,7 @@ public class PlayerTwoShoot : MonoBehaviour
         proyectil.ShootProyectile(_shootPoint.position, mouseCursorPos);
 
         _canShoot = false;
+        spritePoint.sprite = pointers[1];
         _shootTimeRemaining = _timeRemainigInitial;
 
         //GameObject bullet = _pool.RequestBullet();
