@@ -16,7 +16,7 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
-    [SerializeField] private GameObject magicJuan,magicJuan2, magicWizzard;
+    [SerializeField] private GameObject magicJuan, magicWizzard;
 
     private AudioSource audioSource;
 
@@ -28,12 +28,12 @@ public class DialogSystem : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        zapataTalking = true;
-        StartDialogue();
+        //StartDialogue();
     }
 
-    private void StartDialogue()
+    public void StartDialogue()
     {
+        zapataTalking = true;
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         lineIndex = 0;
@@ -77,7 +77,7 @@ public class DialogSystem : MonoBehaviour
             {
                 //GameManager.Instance.GameStart();
                 magicWizzard.SetActive(true);
-                magicJuan2.SetActive(true);
+                magicJuan.SetActive(true);
                 Debug.Log("Cerrar cortinas");
             }
             else if (ch == '¥')
