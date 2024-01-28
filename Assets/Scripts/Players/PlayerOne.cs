@@ -35,17 +35,10 @@ public class PlayerOne : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
 
-            // No destruir el LM durante el cambio de escenas
-            DontDestroyOnLoad(this);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        // Cada escena tendrá suplayer, pero como hicimos varias cosas con singleton que asi no cambiaremos eso
+        Destroy(Instance);
+        Instance = this;
 
         checkpointManager = GetComponent<CheckpointManager>();
     }

@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    [SerializeField]
+    private float _loadSceneTime = 1f;
+
     private int _currentLevel = 1;
 
     public static GameManager Instance;
@@ -41,7 +45,6 @@ public class GameManager : MonoBehaviour
 
     private void HandleLevelChange(int level)
     {
-
         SceneManager.LoadScene(level);
     }
 
@@ -57,7 +60,7 @@ public class GameManager : MonoBehaviour
         if (_currentLevel <= SceneManager.sceneCountInBuildSettings - 1)
         {
             // Se carga la escena del siguiente nivel
-            LoadLevel(_currentLevel);
+            HandleLevelChange(_currentLevel);
         }
 
         else
@@ -81,4 +84,6 @@ public class GameManager : MonoBehaviour
         get { return _currentLevel; }
         set { _currentLevel = value; }
     }
+
+    
 }
