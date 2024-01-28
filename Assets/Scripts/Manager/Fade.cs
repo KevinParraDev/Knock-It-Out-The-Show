@@ -9,6 +9,7 @@ public class Fade : MonoBehaviour
         StopAllCoroutines();
         if (GameManager.Instance)
         {
+            AudioManager.Instance.PlaySound2D("Claps");
             GameManager.Instance.HandleLevelCompleted();
         }
     }

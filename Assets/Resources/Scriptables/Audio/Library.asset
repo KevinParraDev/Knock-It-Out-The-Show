@@ -13,4 +13,25 @@ MonoBehaviour:
   m_Name: Library
   m_EditorClassIdentifier: 
   music: []
-  soundGroups: []
+  soundGroups:
+  - groupID: '"WizzardSpeak"'
+    clips:
+    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+  - groupID: '"Jump"'
+    clips:
+    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+  - groupID: '"Bounce"'
+    clips:
+    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+  - groupID: '"Bounce"'
+    clips:
+    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+  - groupID: '"CakeHit"'
+    clips:
+    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+  - groupID: '"CakeShoot"'
+    clips:
+    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+  - groupID: '"Claps"'
+    clips:
+    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}

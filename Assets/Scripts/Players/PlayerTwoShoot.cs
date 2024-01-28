@@ -79,6 +79,8 @@ public class PlayerTwoShoot : MonoBehaviour
         PublicProyectile proyectil = _proyectilePool.RequestProyectile();
         proyectil.ShootProyectile(_shootPoint.position, mouseCursorPos);
 
+        AudioManager.Instance.PlaySound2D("CakeShoot");
+
         _canShoot = false;
         spritePoint.sprite = pointers[1];
         _shootTimeRemaining = _timeRemainigInitial;

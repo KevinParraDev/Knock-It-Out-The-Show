@@ -553,8 +553,10 @@ MonoBehaviour:
   - "Lo cual es algo aburrido porque esperaba\nverlo caer todo el d\xEDa.\u2195"
   - "Espero se hayan divertido.\u25BA\nNos veremos pronto para ver m\xE1s formas\nde
     humillar a Juan.\u2195"
-  - "Recuerden que siempre los esperamos en...\u25BA\n\xA1\xA1Knock Out Juan!!\u2195"
-  appear: {fileID: 0}
+  - "Recuerden que siempre los esperamos en...\u25BA\n\xA1\xA1Knock It Out!!\u2195"
+  magicJuan: {fileID: 0}
+  magicJuan2: {fileID: 0}
+  magicWizzard: {fileID: 0}
 --- !u!4 &636522385
 Transform:
   m_ObjectHideFlags: 0

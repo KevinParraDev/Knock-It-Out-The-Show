@@ -12,6 +12,7 @@ public class Ball : MonoBehaviour
         {
             Debug.Log("Toco la bola");
             PlayerOne.Instance.Bounse(center.transform.position, boundForce);
+            AudioManager.Instance.PlaySound2D("Bounce");
         }
     }
 }

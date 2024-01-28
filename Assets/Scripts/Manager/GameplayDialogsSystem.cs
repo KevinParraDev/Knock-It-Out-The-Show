@@ -100,7 +100,7 @@ public class GameplayDialogsSystem : MonoBehaviour
 
                 //if (charIndex % charsToPlaySound == 0)
                 //{
-                //    audioSource.Play();
+                //    AudioManager.Instance.PlaySound2D("WizardSpeak");
                 //}
 
                 charIndex++;

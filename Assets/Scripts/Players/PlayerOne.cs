@@ -160,11 +160,12 @@ public class PlayerOne : MonoBehaviour
     // Este salto se llama cuando tiene un salto guardado
     public void Jump()
     {
-        if(canJump)
+        if (canJump)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(new Vector2(0, jumpHeight));
             anim.SetTrigger("Jump");
+            AudioManager.Instance.PlaySound2D("Jump");
         }
     }
 

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kevin Scene.unity
     guid: 0cfa80b874f7524479255cfecc6fdf32
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 153f4db56647fce44903c66702325d86
   m_configObjects: {}
