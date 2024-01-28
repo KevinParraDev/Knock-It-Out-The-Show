@@ -26,7 +26,7 @@ public class PlayerOne : MonoBehaviour
     [Header("Jump")]
     [SerializeField] private float timeJumpSaved;
     [SerializeField] private float coyoteTime;
-    private bool falling;
+    public bool falling;
     public bool saveJump;
     public bool inCoyoteTime;
     public bool canJump;
@@ -79,6 +79,7 @@ public class PlayerOne : MonoBehaviour
                 if (falling)
                 {
                     falling = false;
+                    anim.ResetTrigger("Jump");
                     anim.SetTrigger("Arrive");
                 }
             }
@@ -149,7 +150,8 @@ public class PlayerOne : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(new Vector2(0, jumpHeight));
-            //anim.SetTrigger("Jump");
+            anim.SetTrigger("Jump");
+            Debug.Log("saltando 1");
         }
         else if (callbackContext.performed && !canJump)
         {
@@ -166,6 +168,7 @@ public class PlayerOne : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpHeight));
             anim.SetTrigger("Jump");
             AudioManager.Instance.PlaySound2D("Jump");
+            Debug.Log("saltando 2");
         }
     }
 
