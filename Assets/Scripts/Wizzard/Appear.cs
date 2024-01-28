@@ -5,10 +5,11 @@ using UnityEngine;
 public class Appear : MonoBehaviour
 {
     [SerializeField] private GameObject objectToAppear;
+    [SerializeField] private bool hide;
 
     public void ApearSomething()
     {
-        objectToAppear.SetActive(true);
+        objectToAppear.SetActive(!hide);
     }
 
     public void EndAppear()
