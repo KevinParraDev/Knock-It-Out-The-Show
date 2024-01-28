@@ -29,14 +29,31 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // TODO: Logica de completado con el punto final
-        if ((_endPoint.position - PlayerOne.Instance.transform.position).magnitude < 1 && !_levelFinished)
+        if(collision.gameObject.tag == "Player")
+        {
+            GetComponent<Animator>().enabled = true;
+        }
+    }
+
+    public void ChangeLevel()
+    {
+        if(!_levelFinished)
         {
             _levelFinished = true;
             _loadAnimation.SetBool("Close", true);
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // TODO: Logica de completado con el punto final
+        //if ((_endPoint.position - PlayerOne.Instance.transform.position).magnitude < 1 && !_levelFinished)
+        //{
+        //    _levelFinished = true;
+        //    _loadAnimation.SetBool("Close", true);
+        //}
     }
 }

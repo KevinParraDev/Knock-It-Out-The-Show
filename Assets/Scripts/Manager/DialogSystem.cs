@@ -5,6 +5,7 @@ using TMPro;
 
 public class DialogSystem : MonoBehaviour
 {
+    [SerializeField] private bool showInStart;
     [SerializeField] private float typingTime = 0.025f;
     [SerializeField] private float typingTimeLong = 0.3f;
 
@@ -28,7 +29,8 @@ public class DialogSystem : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        //StartDialogue();
+        if(showInStart)
+            StartDialogue();
     }
 
     public void StartDialogue()
