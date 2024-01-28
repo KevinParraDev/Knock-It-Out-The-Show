@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showInStart: 0
-  typingTime: 0.02
+  typingTime: 0.015
   typingTimeLong: 0.2
   zapataAnim: {fileID: 1641930901}
   charsToPlaySound: 4
@@ -826,11 +826,10 @@ MonoBehaviour:
   - "Se que ya conocen las reglas\u25BA\nPero para aquellos que apenas est\xE1n llegando\r,\nel
     show consiste lanzarle pays a Juan y entorpecer\nsu camino todo lo que puedan!\u2195"
   - "Juan deber\xE1 atravezar una serie de obst\xE1culos\ny llegar a la meta\u2195"
-  - "Cada vez que se caiga o alguno de ustedes\r\nle atine un pay en toda la cara,
-    juan tendra\r\nque volver a iniciar\u2195"
   - "\xA1Empecemos!\u2195\xA7"
   magicJuan: {fileID: 1423797313}
   magicWizzard: {fileID: 257508019}
+  blackCourtain: {fileID: 0}
 --- !u!4 &636522385
 Transform:
   m_ObjectHideFlags: 0
