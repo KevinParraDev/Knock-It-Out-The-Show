@@ -24,13 +24,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-        AudioManager.Instance.SetVolume(0.08f, AudioChannel.Sfx);
     }
 
     public void GameStart()
     {
+        
         LoadLevel(1);
     }
 

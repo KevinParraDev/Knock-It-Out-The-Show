@@ -19,16 +19,22 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
   - groupID: Jump
     clips:
-    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+    - {fileID: 8300000, guid: 913dcd3633f1e7242babde7559a57e02, type: 3}
   - groupID: Bounce
     clips:
-    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+    - {fileID: 8300000, guid: abf64979ae607d44e8663509d129f868, type: 3}
   - groupID: CakeHit
     clips:
-    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+    - {fileID: 8300000, guid: 103575e978d192e42bd9fc7688f5451d, type: 3}
   - groupID: CakeShoot
     clips:
-    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+    - {fileID: 8300000, guid: 543c90204ce863548a4da6475ba32f91, type: 3}
   - groupID: Claps
     clips:
-    - {fileID: 8300000, guid: 85c9f87c13c90384bbbcc3317bba5a56, type: 3}
+    - {fileID: 8300000, guid: 0c4b825c48eb64d4d8ac4b9ca78d4cad, type: 3}
+  - groupID: Checkpoint
+    clips:
+    - {fileID: 8300000, guid: 50b5ec10c6249524aa0eba73249e6744, type: 3}
+  - groupID: PlayerFall
+    clips:
+    - {fileID: 8300000, guid: 60639e95584a6224eb1c06a3bab7a04e, type: 3}

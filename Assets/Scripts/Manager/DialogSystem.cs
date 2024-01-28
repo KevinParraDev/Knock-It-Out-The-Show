@@ -82,6 +82,7 @@ public class DialogSystem : MonoBehaviour
                 //GameManager.Instance.GameStart();
                 magicWizzard.SetActive(true);
                 magicJuan.SetActive(true);
+                AudioManager.Instance.PlaySound2D("Claps");
                 Debug.Log("Cerrar cortinas");
             }
             else if (ch == '¥')

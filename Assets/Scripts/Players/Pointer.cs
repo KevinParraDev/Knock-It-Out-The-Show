@@ -44,11 +44,12 @@ public class Pointer : MonoBehaviour
             if ((transform.position - PlayerOne.Instance.transform.position).magnitude < _killerZone && this.isActiveAndEnabled)
             {
                 EventManager.OnPlayerHit?.Invoke();
-                AudioManager.Instance.PlaySound2D("CakeHit");
-                AudioManager.Instance.PlaySound2D("Claps");
                 PlayerOne.Instance.Death(); 
             }
-
+            else
+            {
+                AudioManager.Instance.PlaySound2D("CakeHit");
+            }
             gameObject.SetActive(false);
             _timeRemaining = _initialTimeRemaining;
         }

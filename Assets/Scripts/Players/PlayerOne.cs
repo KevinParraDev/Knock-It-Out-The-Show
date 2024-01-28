@@ -181,7 +181,7 @@ public class PlayerOne : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.gravityScale = 0;
         LoadCheckpoint();
-
+        AudioManager.Instance.PlaySound2D("PlayerFall");
         EventManager.PlayerOnWater?.Invoke();
     }
 
