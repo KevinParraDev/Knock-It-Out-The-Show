@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         AudioManager.Instance.SetVolume(0.2f, AudioChannel.Sfx);
+        AudioManager.Instance.SetVolume(0.8f, AudioChannel.Music);
+        AudioManager.Instance.PlayMusic(AudioMusicType.Menu);
     }
 
     public void GameStart()

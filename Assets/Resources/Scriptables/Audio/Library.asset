@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29f0fa19c88ff146ba145932dd2b6ea, type: 3}
   m_Name: Library
   m_EditorClassIdentifier: 
-  music: []
+  music:
+  - MusicType: 0
+    Clip: {fileID: 8300000, guid: 764c02272ff206e41b07f593262ebefa, type: 3}
   soundGroups:
   - groupID: WizardSpeak
     clips:
