@@ -402,6 +402,7 @@ MonoBehaviour:
   direction: 1
   timeJumpSaved: 0.2
   coyoteTime: 0.05
+  falling: 0
   saveJump: 0
   inCoyoteTime: 0
   canJump: 0
@@ -1172,7 +1173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442468597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3784494, y: -1.9207499, z: -10}
+  m_LocalPosition: {x: -6.2350025, y: -1.9361, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1866,7 +1867,7 @@ PrefabInstance:
       objectReference: {fileID: 1822060774}
     - target: {fileID: 8535425881371054849, guid: a04b3355818722644bedfb207ca0f1b8, type: 3}
       propertyPath: _shootTimeRemaining
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8535425881371054849, guid: a04b3355818722644bedfb207ca0f1b8, type: 3}
       propertyPath: pointers.Array.data[0]
@@ -2803,6 +2804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b53421eca1ecc4a905ddc8a5ca5881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showInStart: 0
   typingTime: 0.025
   typingTimeLong: 0.2
   zapataAnim: {fileID: 0}
@@ -2813,7 +2815,9 @@ MonoBehaviour:
   - "Hola!\u2195"
   - "Esta es...\u25BA\nLa primera linea\u2195"
   - "Y la segunda!\u2195"
-  appear: {fileID: 0}
+  magicJuan: {fileID: 0}
+  magicWizzard: {fileID: 0}
+  blackCourtain: {fileID: 0}
 --- !u!4 &961027429
 Transform:
   m_ObjectHideFlags: 0
@@ -4114,7 +4118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -375.7301}
+  m_AnchoredPosition: {x: 0, y: -375.73007}
   m_SizeDelta: {x: -63.95, y: -797.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426911514
