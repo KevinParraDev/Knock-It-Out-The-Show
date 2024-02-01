@@ -119,7 +119,7 @@ public class DialogSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && zapataTalking)
+        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Space)) && zapataTalking)
         {
             if (!didDialogueStart)
             {
