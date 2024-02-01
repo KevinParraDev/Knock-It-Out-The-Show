@@ -13,8 +13,16 @@ public class Crosshair : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          spriteRenderer.enabled = true;
-          Vector2 mouseCursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-          transform.position = mouseCursorPos;
+          if (GameManager.Instance.twoPlayers)
+          {
+               spriteRenderer.enabled = true;
+               Vector2 mouseCursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+               transform.position = mouseCursorPos;
+          }
+          else
+          {
+               spriteRenderer.enabled = false;
+          }
+          
     }
 }

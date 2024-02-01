@@ -28,7 +28,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+     private void Update()
+     {
+          Cursor.visible = false;
+
+          if(Input.GetButtonDown("Fire2"))
+               twoPlayers = !twoPlayers;
+     }
+
+     private void Start()
     {
         AudioManager.Instance.SetVolume(0.2f, AudioChannel.Sfx);
         AudioManager.Instance.SetVolume(0.8f, AudioChannel.Music);
