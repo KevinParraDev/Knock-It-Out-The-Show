@@ -96,9 +96,9 @@ MonoBehaviour:
   _proyectileSpeed: 0
   _autoAimArea: 1
   _autoAimDistance: 1
-  _autoShootTimeRemaining: 2.5
+  _autoShootTimeRemaining: 1.2
   _canShoot: 0
-  _shootTimeRemaining: 1.5
+  _shootTimeRemaining: 0.5
   spritePoint: {fileID: 0}
   pointers:
   - {fileID: 0}
