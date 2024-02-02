@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
         else
         {
             HandleMenu();
+            _currentLevel = 1;
         }
     }
 
