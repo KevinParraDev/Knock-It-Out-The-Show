@@ -6,23 +6,45 @@ public class StartScreen : MonoBehaviour
 {
     [SerializeField] private GameObject magicWizzard;
     [SerializeField] private DialogSystem dialogSystem;
-    private bool primerToque;
+    [SerializeField] private GameObject botones;
+    private int numeroToques;
 
     public void AparecerMago()
     {
-        primerToque = true;
+        numeroToques++;
         magicWizzard.SetActive(true);
         dialogSystem.StartDialogue();
     }
 
+    public void AparecerInputs()
+    {
+        numeroToques++;
+        botones.SetActive(true);
+    }
+
+    public void ElegirDificultad(int dif)
+    {
+        Debug.Log("Dificultad: " + dif);
+
+        if (dif == 1)
+            GameManager.Instance.twoPlayers = false;
+        else if (dif == 2)
+            GameManager.Instance.twoPlayers = true;
+
+        botones.SetActive(false);
+        AudioManager.Instance.SetVolume(1f, AudioChannel.Sfx);
+        AudioManager.Instance.PlaySound2D("RedobleTambores");
+        AudioManager.Instance.SetVolume(0.2f, AudioChannel.Sfx);
+        GetComponent<Animator>().SetTrigger("QuitarJugadores");
+    }
+
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !primerToque)
+        if (Input.GetButtonDown("Fire1"))
         {
-            AudioManager.Instance.SetVolume(1f, AudioChannel.Sfx);
-            AudioManager.Instance.PlaySound2D("RedobleTambores");
-            AudioManager.Instance.SetVolume(0.2f, AudioChannel.Sfx);
-            GetComponent<Animator>().SetTrigger("Quitar");
+            if(numeroToques == 0)
+                GetComponent<Animator>().SetTrigger("Quitar");
+            
         }
     }
 }
